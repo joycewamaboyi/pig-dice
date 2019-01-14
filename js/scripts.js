@@ -198,3 +198,15 @@ $(function() {
     } else {
       $("#winner").text("");
     }
+    var playerOneTurn = true;
+  
+    // Toggle between players
+      if (playerOneTurn) {
+         $("#player-one-buttons").show();
+         $("#player-two-buttons").hide();
+      } else {
+        $("#player-two-buttons").show();
+        $("#player-one-buttons").hide();
+      }
+    });
+  });
