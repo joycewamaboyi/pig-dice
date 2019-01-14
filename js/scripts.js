@@ -173,3 +173,28 @@ $(function() {
             $("#dice-pic").attr("src", "image/dice-6.png");
           }
         });
+        // Player Two animationEnd
+  $("#player-two-roll").on("click", function() {
+    var animationName = 'animated tada';
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $("#dice-pic").addClass(animationName).one(animationEnd, function() {
+      $(this).removeClass(animationName);
+    });
+  });
+  
+  //Player Two Next Button Click Event
+  $("#player-two-next").click(function(event) {
+    event.preventDefault();
+  
+    // What happens when a user clicks the next button
+    playerTwo.nextTurn();
+    $("#player-two-running").html("<h1 class='running-total'>" + playerTwo.turnRunningScore + "</h1>");
+    $("#player-two-score").html("<h1 class='total-score'>" + playerTwo.totalBankedScore + "</h1>");
+  
+    // Win condition
+    if (playerTwo.totalBankedScore >= 20) {
+      $("#winner").show();
+      $("#winner").html("<h1 class='total-score'>" + "You win!!!" + "</h1>");
+    } else {
+      $("#winner").text("");
+    }
