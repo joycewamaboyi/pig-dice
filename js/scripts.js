@@ -48,3 +48,16 @@ Player.prototype.nextTurn = function () {
 this.bankPoints();
 this.turnRunningScore = 0;
 }
+// Create six-sided dice
+var sixSidedDice = new Dice();
+  
+//Prototype to enter last roll value into player object
+Player.prototype.setLastRoll = function(x) {
+  this.lastRoll = x;
+}
+
+// Prototype to reset running total if 1 is rolled
+Player.prototype.resetRunningTotalOnOne = function() {
+  if (this.lastRoll === 1) {
+    this.turnRunningScore = 0;
+  }
