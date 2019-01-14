@@ -75,3 +75,23 @@ main {
     text-emphasis: none;
     font-style: italic;
   }
+  #name{
+    text-align: justify;
+        font-size: 15px;
+        flex-direction: column;
+        color: black;
+        font-style: normal;
+        line-height: 23px;
+        text-rendering: optimizeLegibility;
+        margin-bottom: 17px;
+        display: block;
+        font-family: 'Arial Narrow',Arial, Helvetica, sans-serif;
+        line-height: 1.4em;
+        text-transform: none;
+        letter-spacing: 0em;
+        font-weight: 400;
+        font-style: normal
+    }
+    footer{
+        text-align: center;
+    }
