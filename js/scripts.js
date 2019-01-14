@@ -76,3 +76,13 @@ $(function() {
       $(this).removeClass(animationName);
     });
   });
+  //Player One Roll Button Click Event
+  $("#player-one-roll").click(function(event) {
+    event.preventDefault();
+    var sixSidedDiceRoll = sixSidedDice.roll();
+    playerOne.setLastRoll(sixSidedDiceRoll);
+    playerOne.resetRunningTotalOnOne(sixSidedDiceRoll);
+    playerOne.addRollToArray(sixSidedDiceRoll);
+    playerOne.sumOfRolls();
+
+    $("#player-one-running").html("<h1 class='running-total'>" + playerOne.turnRunningScore + "</h1>");
