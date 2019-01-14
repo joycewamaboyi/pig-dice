@@ -136,3 +136,28 @@ $(function() {
         $("#player-one-buttons").show();
       }
     });
+    /// PLAYER TWO
+  
+    //Roll Button Click Event
+  
+    $("#player-two-roll").click(function(event) {
+        event.preventDefault();
+        var sixSidedDiceRoll = sixSidedDice.roll();
+        playerTwo.setLastRoll(sixSidedDiceRoll);
+        playerTwo.resetRunningTotalOnOne(sixSidedDiceRoll);
+        playerTwo.addRollToArray(sixSidedDiceRoll);
+        playerTwo.sumOfRolls();
+    
+        $("#player-two-running").html("<h1 class='running-total'>" + playerTwo.turnRunningScore + "</h1>");
+    
+        //Change image based on dice roll, AND swith player turn
+        if (sixSidedDiceRoll === 1) {
+          $("#dice-pic").attr("src", "image/dice-1.png");
+          var playerOneTurn = true;
+          if (playerOneTurn) {
+             $("#player-one-buttons").show();
+             $("#player-two-buttons").hide();
+          } else {
+            $("#player-two-buttons").show();
+            $("#player-one-buttons").hide();
+          }
