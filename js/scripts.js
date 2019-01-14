@@ -161,3 +161,15 @@ $(function() {
             $("#player-two-buttons").show();
             $("#player-one-buttons").hide();
           }
+        } else if (sixSidedDiceRoll === 2) {
+            $("#dice-pic").attr("src", "image/dice-2.png");
+          } else if (sixSidedDiceRoll === 3) {
+            $("#dice-pic").attr("src", "image/dice-3.png");
+          } else if (sixSidedDiceRoll === 4) {
+            $("#dice-pic").attr("src", "image/dice-4.png");
+          } else if (sixSidedDiceRoll === 5) {
+            $("#dice-pic").attr("src", "image/dice-5.png");
+          } else if (sixSidedDiceRoll === 6) {
+            $("#dice-pic").attr("src", "image/dice-6.png");
+          }
+        });
