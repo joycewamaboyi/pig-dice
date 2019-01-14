@@ -31,3 +31,18 @@ main {
   .container {
     margin-top: 2%;
   }
+  .running-total {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .total-score {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+  }
+  
+  .player-one-rolls-one {
+    font-size: 36px;
+    font-family: 'Erica One', sans-serif;
+    text-align: center;
+    display: none;
+  }
