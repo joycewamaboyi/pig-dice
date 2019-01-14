@@ -1,3 +1,7 @@
+// Business logic
+
+//Player Object Constructor
+
 function Player(name) {
     this.name = name;
     this.turnRunningScore = 0;
@@ -117,7 +121,7 @@ $(function() {
     $("#player-one-running").html("<h1 class='running-total'>" + playerOne.turnRunningScore + "</h1>");
     $("#player-one-score").html("<h1 class='total-score'>" + playerOne.totalBankedScore + "</h1>");
   
-    if (playerOne.totalBankedScore >= 20) {
+    if (playerOne.totalBankedScore >= 10) {
       $("#winner").show();
       $("#winner").html("<h1 class='total-score'>" + "You win!!!" + "</h1>");
     } else {
@@ -192,7 +196,7 @@ $(function() {
     $("#player-two-score").html("<h1 class='total-score'>" + playerTwo.totalBankedScore + "</h1>");
   
     // Win condition
-    if (playerTwo.totalBankedScore >= 20) {
+    if (playerTwo.totalBankedScore >= 10) {
       $("#winner").show();
       $("#winner").html("<h1 class='total-score'>" + "You win!!!" + "</h1>");
     } else {
