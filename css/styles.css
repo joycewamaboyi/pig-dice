@@ -46,3 +46,19 @@ main {
     text-align: center;
     display: none;
   }
+  .player-col {
+    border: 10px solid red;
+    border-radius: 6px;
+    height: 450px;
+    background: white;
+  }
+  
+  .btn {
+    height: 60px;
+    width: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    color: #fff;
+  }
+  
