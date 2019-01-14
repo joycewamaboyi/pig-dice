@@ -16,3 +16,18 @@ main {
     font-style: italic;
 
   }
+  #title {
+    font-size: 72px;
+  }
+  
+  h2 {
+    font-family:'Times New Roman', Times, serif
+  }
+  
+  h3 {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    margin-top: 2%;
+  }
