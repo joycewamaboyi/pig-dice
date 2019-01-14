@@ -109,3 +109,30 @@ $(function() {
     $("#dice-pic").attr("src", "image/dice-6.png");
   }
 });
+ //Player One Next Button Click Event
+ $("#player-one-next").click(function(event) {
+    event.preventDefault();
+  
+    playerOne.nextTurn();
+    $("#player-one-running").html("<h1 class='running-total'>" + playerOne.turnRunningScore + "</h1>");
+    $("#player-one-score").html("<h1 class='total-score'>" + playerOne.totalBankedScore + "</h1>");
+  
+    if (playerOne.totalBankedScore >= 20) {
+      $("#winner").show();
+      $("#winner").html("<h1 class='total-score'>" + "You win!!!" + "</h1>");
+    } else {
+      $("#winner").text("");
+    }
+  
+    var playerOneTurn = false;
+  
+    // $button set playerTwo
+      if (!playerOneTurn) {
+         $("#player-two-buttons").show();
+         $("#player-one-buttons").hide();
+      } else {
+  
+        $("#player-two-buttons").hide();
+        $("#player-one-buttons").show();
+      }
+    });
