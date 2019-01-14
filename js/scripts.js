@@ -35,4 +35,16 @@ Player.prototype.sumOfRolls = function() {
       this.turnRunningScore = this.turnRunningScore;
     } else {
       this.turnRunningScore += this.currentTurnArray[i = this.currentTurnArray.length - 1];
-      
+    }
+}
+}
+// Prototype to Bank points
+Player.prototype.bankPoints = function() {
+this.totalBankedScore += this.turnRunningScore;
+}
+
+// Hold/Next turnRunningScore <--Added this, score will bank when a user presses stay
+Player.prototype.nextTurn = function () {
+this.bankPoints();
+this.turnRunningScore = 0;
+}
