@@ -8,13 +8,13 @@ Here it's about a pig dice game
 TUYISHIME Joyeuse
 tuyjoy92@yahoo.fr
 Moringa School
-...
+
 ## project setup instructions
 ...
 you must have Javascript, VS code ,and Browser.
 ...
 ## link to live site on GitHub Pages
-
+ https://joycewamaboyi.github.io/pig-dice/
 ## Contact information
 ### twitter: joycewamaboyi
 ### Linkedin: Joyce Tuyishime
