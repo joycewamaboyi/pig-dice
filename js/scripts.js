@@ -61,3 +61,18 @@ Player.prototype.resetRunningTotalOnOne = function() {
   if (this.lastRoll === 1) {
     this.turnRunningScore = 0;
   }
+}
+  
+// FRONT END LOGIC
+
+$(function() {
+  var playerOneTurn = true;
+
+  //PLAYER ONE
+  $("#player-one-roll").on("click", function() {
+    var animationName = 'animated tada';
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $("#dice-pic").addClass(animationName).one(animationEnd, function() {
+      $(this).removeClass(animationName);
+    });
+  });
