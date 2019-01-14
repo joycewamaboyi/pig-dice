@@ -61,4 +61,17 @@ main {
     margin: 10px;
     color: #fff;
   }
+  #winner {
+    display: none;
+    font-family: 'Erica One';
+    font-size: 72px;
+  }
   
+  #player-two-buttons {
+    display: none;
+  }
+  #six{
+    text-align: center;
+    text-emphasis: none;
+    font-style: italic;
+  }
